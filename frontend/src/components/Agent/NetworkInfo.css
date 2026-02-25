@@ -1,0 +1,72 @@
+.network-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.network-stats-card,
+.interfaces-list {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+}
+
+.network-stats-card h3,
+.interfaces-list h3 {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-4);
+  color: var(--text-primary);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-4);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-3);
+  background: var(--bg-surface-2);
+  border-radius: var(--radius-sm);
+}
+
+.stat-label {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.stat-value {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  font-family: var(--font-data);
+  color: var(--text-primary);
+}
+
+.interface-card {
+  margin-top: var(--space-4);
+  padding: var(--space-4);
+  background: var(--bg-surface-2);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.interface-card h4 {
+  color: var(--accent);
+  margin-bottom: var(--space-3);
+}
+
+.interface-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.address-row {
+  display: flex;
+  justify-content: space-between;
+}

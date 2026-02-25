@@ -1,0 +1,3 @@
+/* Import our custom CSS variables and global styles */
+@import './styles/variables.css';
+@import './styles/global.css';

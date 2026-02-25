@@ -1,0 +1,132 @@
+# ============================================================
+# .gitignore — Remote Monitoring Portal
+# Place this file in your ROOT folder (same level as
+# backend/, frontend/, agent/ folders)
+#
+# remote-monitoring-portal/   ← ROOT
+#   ├── .gitignore             ← THIS FILE GOES HERE
+#   ├── backend/
+#   ├── frontend/
+#   ├── agent/
+#   └── README.md
+# ============================================================
+
+
+# ──────────────────────────────────────────
+# 🔴 SECRETS — NEVER commit these
+# ──────────────────────────────────────────
+
+# Environment files (contain SECRET_KEY, passwords, etc.)
+.env
+.env.local
+.env.development
+.env.production
+*.env
+
+# Agent config contains server URL + secret token
+# We ignore config.py and commit config.example.py instead
+agent/config.py
+
+
+# ──────────────────────────────────────────
+# 🗄️ DATABASES
+# ──────────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+monitoring.db
+remote_monitoring.db
+
+
+# ──────────────────────────────────────────
+# 🐍 PYTHON (backend + agent)
+# ──────────────────────────────────────────
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Compiled Python bytecode
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+*.whl
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Type checker
+.mypy_cache/
+
+
+# ──────────────────────────────────────────
+# 🔨 PYINSTALLER — agent .exe build output
+# ──────────────────────────────────────────
+agent/build/
+agent/dist/
+agent/*.spec
+
+
+# ──────────────────────────────────────────
+# ⚛️ REACT / NODE / VITE (frontend)
+# ──────────────────────────────────────────
+
+# Dependencies (300MB+ — never commit)
+node_modules/
+
+# Vite production build output
+frontend/dist/
+frontend/build/
+frontend/.vite/
+
+
+# ──────────────────────────────────────────
+# 📋 LOGS
+# ──────────────────────────────────────────
+*.log
+logs/
+agent/agent.log
+npm-debug.log*
+
+
+# ──────────────────────────────────────────
+# 💻 OS FILES
+# ──────────────────────────────────────────
+
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+._*
+
+# Linux
+*~
+
+
+# ──────────────────────────────────────────
+# 🛠️ EDITORS
+# ──────────────────────────────────────────
+
+# VS Code (keeps recommended extensions shared with team)
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# JetBrains (PyCharm, WebStorm)
+.idea/
+
+# Vim
+*.swp
+*.swo

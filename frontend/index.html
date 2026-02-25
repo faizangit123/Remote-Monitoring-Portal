@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tab title and favicon -->
+    <title>Remote Monitoring Portal</title>
+    <link rel="icon" type="image/svg+xml" href="/monitor-icon.svg" />
+
+    <!-- Prevent search engines from indexing this internal tool -->
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- Description (shows in browser history / bookmarks) -->
+    <meta name="description" content="Remote Monitoring Portal — Real-time system monitoring dashboard" />
+
+    <!-- Google Fonts: DM Sans + IBM Plex Mono (used in our CSS variables) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Prevent flash of white background before React loads -->
+    <style>
+      html, body {
+        background-color: #080c14;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
