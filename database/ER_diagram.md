@@ -11,7 +11,7 @@ This document describes the database structure for the Remote Monitoring Portal.
 ### 1. USERS Table
 Stores portal users (Admin and regular Users)
 
-| Column Name    | Data Type    | Constraints        | Description                        |
+| Column Name   | Data Type    | Constraints       | Description                          |
 |---------------|--------------|-------------------|--------------------------------------|
 | id            | INTEGER      | PRIMARY KEY       | Unique user identifier               |
 | username      | VARCHAR(50)  | UNIQUE, NOT NULL  | Login username                       |
@@ -30,7 +30,7 @@ Stores portal users (Admin and regular Users)
 ### 2. AGENTS Table
 Stores information about Windows agents
 
-| Column Name    | Data Type    | Constraints        | Description                          |
+| Column Name   | Data Type    | Constraints       | Description                          |
 |---------------|--------------|-------------------|--------------------------------------|
 | id            | INTEGER      | PRIMARY KEY       | Unique agent identifier              |
 | agent_id      | VARCHAR(50)  | UNIQUE, NOT NULL  | Human-readable agent ID              |
@@ -52,11 +52,11 @@ Stores information about Windows agents
 ### 3. USER_AGENTS Table (Association Table)
 Links users to agents they can access
 
-| Column Name    | Data Type    | Constraints        | Description                          |
-|---------------|--------------|-------------------|--------------------------------------|
-| id            | INTEGER      | PRIMARY KEY       | Unique record identifier             |
-| user_id       | INTEGER      | FOREIGN KEY, NOT NULL | References users.id               |
-| agent_id      | INTEGER      | FOREIGN KEY, NOT NULL | References agents.id              |
+| Column Name   | Data Type    | Constraints           | Description                     |
+|---------------|--------------|-----------------------|---------------------------------|
+| id            | INTEGER      | PRIMARY KEY           | Unique record identifier        |
+| user_id       | INTEGER      | FOREIGN KEY, NOT NULL | References users.id             |
+| agent_id      | INTEGER      | FOREIGN KEY, NOT NULL | References agents.id            |
 
 **Unique Constraint:** (user_id, agent_id) - A user can't be assigned to same agent twice
 
@@ -68,23 +68,23 @@ Links users to agents they can access
 ### 4. SYSTEM_DATA Table
 Stores system information collected from agents
 
-| Column Name         | Data Type     | Constraints      Description                          |
-|--------------------|---------------|------------------|-------------------------------------|
-| id                 | INTEGER       | PRIMARY KEY       | Unique record identifier             |
-| agent_id           | INTEGER       | FOREIGN KEY, NOT NULL | References agents.id              |
-| os_name            | VARCHAR(100)  | NULL              | Operating system name                |
-| os_version         | VARCHAR(50)   | NULL              | OS version                           |
-| cpu_model          | VARCHAR(200)  | NULL              | CPU model name                       |
-| cpu_cores          | INTEGER       | NULL              | Number of CPU cores                  |
-| cpu_usage_percent  | FLOAT         | NULL              | Current CPU usage %                  |
-| ram_total_gb       | FLOAT         | NULL              | Total RAM in GB                      |
-| ram_used_gb        | FLOAT         | NULL              | Used RAM in GB                       |
-| ram_usage_percent  | FLOAT         | NULL              | RAM usage %                          |
-| disk_total_gb      | FLOAT         | NULL              | Total disk space in GB               |
-| disk_used_gb       | FLOAT         | NULL              | Used disk space in GB                |
-| disk_usage_percent | FLOAT         | NULL              | Disk usage %                         |
-| uptime_hours       | FLOAT         | NULL              | System uptime in hours               |
-| collected_at       | DATETIME      | DEFAULT NOW       | Data collection timestamp            |
+| Column Name        | Data Type     | Constraints           |  Description                         |
+|--------------------|---------------|-----------------------|--------------------------------------|
+| id                 | INTEGER       | PRIMARY KEY           | Unique record identifier             |
+| agent_id           | INTEGER       | FOREIGN KEY, NOT NULL | References agents.id                 |
+| os_name            | VARCHAR(100)  | NULL                  | Operating system name                |
+| os_version         | VARCHAR(50)   | NULL                  | OS version                           |
+| cpu_model          | VARCHAR(200)  | NULL                  | CPU model name                       |
+| cpu_cores          | INTEGER       | NULL                  | Number of CPU cores                  |
+| cpu_usage_percent  | FLOAT         | NULL                  | Current CPU usage %                  |
+| ram_total_gb       | FLOAT         | NULL                  | Total RAM in GB                      |
+| ram_used_gb        | FLOAT         | NULL                  | Used RAM in GB                       |
+| ram_usage_percent  | FLOAT         | NULL                  | RAM usage %                          |
+| disk_total_gb      | FLOAT         | NULL                  | Total disk space in GB               |
+| disk_used_gb       | FLOAT         | NULL                  | Used disk space in GB                |
+| disk_usage_percent | FLOAT         | NULL                  | Disk usage %                         |
+| uptime_hours       | FLOAT         | NULL                  | System uptime in hours               |
+| collected_at       | DATETIME      | DEFAULT NOW           | Data collection timestamp            |
 
 **Relationships:**
 - Many system_data records belong to one agent
@@ -94,7 +94,7 @@ Stores system information collected from agents
 ### 5. PROCESSES Table
 Stores running processes from agents
 
-| Column Name      | Data Type    | Constraints        | Description                        |
+| Column Name     | Data Type    | Constraints       | Description                          |
 |-----------------|--------------|-------------------|--------------------------------------|
 | id              | INTEGER      | PRIMARY KEY       | Unique record identifier             |
 | agent_id        | INTEGER      | FOREIGN KEY, NOT NULL | References agents.id             |
@@ -114,17 +114,17 @@ Stores running processes from agents
 ### 6. COMMANDS Table
 Stores commands sent from portal to agents
 
-| Column Name    | Data Type     | Constraints        | Description                          |
-|---------------|---------------|-------------------|--------------------------------------|
-| id            | INTEGER       | PRIMARY KEY       | Unique command identifier            |
-| agent_id      | INTEGER       | FOREIGN KEY, NOT NULL | References agents.id              |
-| user_id       | INTEGER       | FOREIGN KEY, NOT NULL | References users.id (who sent it) |
-| command_type  | VARCHAR(50)   | NOT NULL          | Type: 'refresh_data', 'kill_process' |
-| command_data  | TEXT          | NULL              | Additional command parameters (JSON) |
-| status        | VARCHAR(20)   | DEFAULT 'pending' | Status: pending, executed, failed    |
-| result        | TEXT          | NULL              | Command execution result             |
-| created_at    | DATETIME      | DEFAULT NOW       | Command creation timestamp           |
-| executed_at   | DATETIME      | NULL              | Command execution timestamp          |
+| Column Name   | Data Type     | Constraints           | Description                          |
+|---------------|---------------|-----------------------|--------------------------------------|
+| id            | INTEGER       | PRIMARY KEY           | Unique command identifier            |
+| agent_id      | INTEGER       | FOREIGN KEY, NOT NULL | References agents.id                 |
+| user_id       | INTEGER       | FOREIGN KEY, NOT NULL | References users.id (who sent it)    |
+| command_type  | VARCHAR(50)   | NOT NULL              | Type: 'refresh_data', 'kill_process' |
+| command_data  | TEXT          | NULL                  | Additional command parameters (JSON) |
+| status        | VARCHAR(20)   | DEFAULT 'pending'     | Status: pending, executed, failed    |
+| result        | TEXT          | NULL                  | Command execution result             |
+| created_at    | DATETIME      | DEFAULT NOW           | Command creation timestamp           |
+| executed_at   | DATETIME      | NULL                  | Command execution timestamp          |
 
 **Relationships:**
 - Many commands belong to one agent
