@@ -192,37 +192,22 @@ def update_user(
 @router.delete("/{user_id}", response_model=schemas.MessageResponse)
 
 def delete_user(
-
     user_id: int,
-
     db: Session = Depends(get_db),
-
     admin: models.User = Depends(get_current_active_admin)
 
 ):
-
     if user_id == admin.id:
-
         raise HTTPException(
-
             status_code=status.HTTP_400_BAD_REQUEST,
-
             detail="You cannot delete your own account"
-
         )
-
     success = crud.delete_user(db, user_id=user_id)
-
     if not success:
-
         raise HTTPException(
-
             status_code=status.HTTP_404_NOT_FOUND,
-
             detail=f"User with ID {user_id} not found"
-
         )
-
     return {"message": f"User {user_id} deleted successfully", "success": True}
 
 
@@ -342,5 +327,4 @@ def get_my_profile(
     # Note: using get_current_user (not admin) - any user can see their own profile
 
 ):
-
     return current_user

@@ -162,7 +162,7 @@ function Login() {
               <span className="login-hint-role admin">ADMIN</span>
             </div>
             <div className="login-hint-row">
-              <code>user1</code><span>/</span><code>user123</code>
+              <code>testuser</code><span>/</span><code>testuser@example.com</code>
               <span className="login-hint-role user">USER</span>
             </div>
           </div>

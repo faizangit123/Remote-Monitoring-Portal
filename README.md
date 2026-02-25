@@ -4,10 +4,16 @@ A Python-based remote monitoring system for Windows machines. A lightweight agen
 
 ## 📸 Screenshots
 
-![Dashboard](docs/images/dashboard.png)
+![Dashboard]![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
+![alt text](image-4.png)
+![alt text](image-5.png)
 *Admin dashboard showing all monitored agents*
 
-![Agent Details](docs/images/agent-details.png)
+![Agent Details]![alt text](image-6.png)
+![alt text](image-7.png)
 *Real-time system monitoring with live charts*
 
 ---

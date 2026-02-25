@@ -113,10 +113,10 @@
   animation: logo-pulse 3s ease-in-out infinite;
 }
 
-@keyframes logo-pulse {
+/* @keyframes logo-pulse {
   0%, 100% { box-shadow: 0 0 20px rgba(0, 201, 255, 0.3); }
   50%       { box-shadow: 0 0 40px rgba(0, 201, 255, 0.5); }
-}
+} */
 
 .login-title {
   font-size: var(--text-2xl);
