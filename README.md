@@ -129,8 +129,7 @@ remote-monitoring-portal/
 │   │   ├── models.py      # Database table definitions
 │   │   ├── auth.py        # JWT, bcrypt, token helpers
 │   │   ├── routers/       # auth, users, agents, commands, websocket
-│   │   └── websockets/
-│   │       └── manager.py # WebSocket connection manager
+│   │   └── websockets     # WebSocket connection 
 │   ├── seed_data.py       # Populate DB with test data
 │   └── requirements.txt
 │
@@ -265,11 +264,10 @@ For detailed setup instructions and a full troubleshooting reference, see [SETUP
 - [ ] Mobile app (React Native)
 
 ---
+## 📧 Support
 
-## 📝 License
-
-MIT License — see [LICENSE](LICENSE) for details.
+For issues or questions, please check the code comments or Django documentation.
 
 ---
-
+**Happy Coding! Fiazan**
 *Built with Python, React, and WebSockets*
