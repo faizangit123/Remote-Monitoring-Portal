@@ -13,7 +13,7 @@
 
 
 # ──────────────────────────────────────────
-# 🔴 SECRETS — NEVER commit these
+#  SECRETS — NEVER commit these
 # ──────────────────────────────────────────
 
 # Environment files (contain SECRET_KEY, passwords, etc.)
@@ -29,7 +29,7 @@ agent/config.py
 
 
 # ──────────────────────────────────────────
-# 🗄️ DATABASES
+#  DATABASES
 # ──────────────────────────────────────────
 *.db
 *.sqlite
@@ -39,7 +39,7 @@ remote_monitoring.db
 
 
 # ──────────────────────────────────────────
-# 🐍 PYTHON (backend + agent)
+#  PYTHON (backend + agent)
 # ──────────────────────────────────────────
 
 # Virtual environments
@@ -69,7 +69,7 @@ htmlcov/
 
 
 # ──────────────────────────────────────────
-# 🔨 PYINSTALLER — agent .exe build output
+#  PYINSTALLER — agent .exe build output
 # ──────────────────────────────────────────
 agent/build/
 agent/dist/
@@ -77,7 +77,7 @@ agent/*.spec
 
 
 # ──────────────────────────────────────────
-# ⚛️ REACT / NODE / VITE (frontend)
+# ⚛ REACT / NODE / VITE (frontend)
 # ──────────────────────────────────────────
 
 # Dependencies (300MB+ — never commit)
@@ -90,7 +90,7 @@ frontend/.vite/
 
 
 # ──────────────────────────────────────────
-# 📋 LOGS
+#  LOGS
 # ──────────────────────────────────────────
 *.log
 logs/
@@ -99,7 +99,7 @@ npm-debug.log*
 
 
 # ──────────────────────────────────────────
-# 💻 OS FILES
+#  OS FILES
 # ──────────────────────────────────────────
 
 # Windows
@@ -116,7 +116,7 @@ $RECYCLE.BIN/
 
 
 # ──────────────────────────────────────────
-# 🛠️ EDITORS
+#  EDITORS
 # ──────────────────────────────────────────
 
 # VS Code (keeps recommended extensions shared with team)
@@ -130,3 +130,5 @@ $RECYCLE.BIN/
 # Vim
 *.swp
 *.swo
+
+!agent/RemoteMonitoringAgent.spec
