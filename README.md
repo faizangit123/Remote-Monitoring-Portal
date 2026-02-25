@@ -4,16 +4,19 @@ A Python-based remote monitoring system for Windows machines. A lightweight agen
 
 ## 📸 Screenshots
 
-![Dashboard]![alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-2.png)
-![alt text](image-3.png)
-![alt text](image-4.png)
-![alt text](image-5.png)
+<img width="1916" height="983" alt="Screenshot 2026-02-25 141751" src="https://github.com/user-attachments/assets/e7a29bb7-34b0-4921-86e9-3971a97e8848" />
+<img width="1918" height="976" alt="Screenshot 2026-02-25 141859" src="https://github.com/user-attachments/assets/2098333f-563f-4568-b142-2693b261ecd4" />
+<img width="1916" height="979" alt="Screenshot 2026-02-25 141932" src="https://github.com/user-attachments/assets/bcd0333d-19f6-4e25-93c4-a0f48b9a0f82" />
+<img width="1913" height="978" alt="Screenshot 2026-02-25 142001" src="https://github.com/user-attachments/assets/5c990373-3c12-47c3-9ae3-464b8dee4be9" />
+<img width="1915" height="986" alt="Screenshot 2026-02-25 142045" src="https://github.com/user-attachments/assets/71046dae-49ff-4161-8765-1ddf42ae0a9c" />
+<img width="1916" height="985" alt="Screenshot 2026-02-25 142113" src="https://github.com/user-attachments/assets/de0b5349-c041-483c-a3e5-ce9f1eb18067" />
+<img width="1911" height="979" alt="Screenshot 2026-02-25 142147" src="https://github.com/user-attachments/assets/f4ecda42-ae28-46b6-b736-325bde356ea3" />
+
 *Admin dashboard showing all monitored agents*
 
-![Agent Details]![alt text](image-6.png)
-![alt text](image-7.png)
+
+<img width="1915" height="982" alt="Screenshot 2026-02-25 142237" src="https://github.com/user-attachments/assets/79d383fb-e3a7-4a73-a946-06688d94b39d" />
+<img width="1909" height="984" alt="Screenshot 2026-02-25 142401" src="https://github.com/user-attachments/assets/9d4ae6b7-6c18-41f1-87f0-c2bc622c6d68" />
 *Real-time system monitoring with live charts*
 
 ---
