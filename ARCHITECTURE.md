@@ -59,13 +59,13 @@ remote-monitoring-portal/
 │   │   ├── models.py          # SQLAlchemy models
 │   │   ├── schemas.py         # Pydantic schemas
 │   │   ├── auth.py            # Authentication logic
-│   │   ├── crud.py            # Database operations
-│   │   ├── websocket.py       # WebSocket handlers
+│   │   ├── crud.py            # Database operations    
 │   │   └── routers/
 │   │       ├── __init__.py
 │   │       ├── auth.py        # Auth endpoints
 │   │       ├── agents.py      # Agent management
 │   │       ├── users.py       # User management
+|   |       ├── websocket.py   # WebSocket handlers   
 │   │       └── commands.py    # Command endpoints
 │   ├── requirements.txt
 │   ├── .env
