@@ -32,13 +32,11 @@ backend/
 │   ├── models.py             # Table definitions (users, agents, system_data, commands)
 │   ├── auth.py               # bcrypt hashing, JWT encode/decode, agent token generation
 │   ├── routers/
-│   │   ├── auth.py           # POST /api/auth/login, GET /api/auth/me
-│   │   ├── users.py          # CRUD /api/users/ (admin only)
-│   │   ├── agents.py         # CRUD /api/agents/ + system data endpoints
-│   │   ├── commands.py       # POST /api/commands/ — send commands to agents
-│   │   └── websocket.py      # /ws/agent/{id} and /ws/client/{id}
-│   └── websockets/
-│       └── manager.py        # ConnectionManager — tracks live agent + client sockets
+│      ├── auth.py           # POST /api/auth/login, GET /api/auth/me
+│      ├── users.py          # CRUD /api/users/ (admin only)
+│      ├── agents.py         # CRUD /api/agents/ + system data endpoints
+│      ├── commands.py       # POST /api/commands/ — send commands to agents
+│      └── websocket.py      # /ws/agent/{id} and /ws/client/{id}      
 ├── seed_data.py              # Populate DB with test users, agents, and history
 ├── requirements.txt
 └── .env                      # ← you create this (see below)
