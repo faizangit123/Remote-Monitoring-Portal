@@ -1,8 +1,18 @@
-# 🖥️ Remote Monitoring Portal
+# Remote Monitoring Portal
 
 A Python-based remote monitoring system for Windows machines. A lightweight agent collects real-time system metrics and streams them over WebSocket to a FastAPI backend, which serves a React dashboard with live charts, process management, and role-based access control.
 
-## 📸 Screenshots
+---
+
+## 🌐 Live Demo
+
+| Service | URL |
+|---------|-----|
+| **Frontend** | [https://skill-sync-sage-nu.vercel.app/](https://remote-monitoring-portal.vercel.app/login) |
+
+---
+
+## Screenshots
 
 <img width="1916" height="983" alt="Screenshot 2026-02-25 141751" src="https://github.com/user-attachments/assets/e7a29bb7-34b0-4921-86e9-3971a97e8848" />
 <img width="1918" height="976" alt="Screenshot 2026-02-25 141859" src="https://github.com/user-attachments/assets/2098333f-563f-4568-b142-2693b261ecd4" />
